@@ -1,12 +1,50 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-        Hello from Facelets
-    </h:body>
-</html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/template/template.xhtml">
+
+    <ui:define name="content">
+
+        <h1 align="center" style="background-color: windowframe;padding-left: 75px; padding-right: 75px; padding-top: 10px; padding-bottom: 10px">Sağlıkçılara uzun süreli nöbet kalksın. Virüs yükleri ve bulaştırıcılıkları azalsın.</h1>
+        <div class="row" style="margin-top: 25px; margin-left: 25px">
+            <div class="col-md-7">
+                <img class="rounded mx-auto d-block" src="assets/saglikci.jpg" width="433" height="244" alt="#"/>
+                <h6 align="center" style="margin-top: 25px; margin-left: 100px; margin-right: 100px">COVID-19'a bağlı pandemi tanı, takip ve tedavi sürecinde sağlık çalışanları virüse en fazla maruz kalan grup. Sağlık çalışanları hem kendileri hasta olma riski hem de hizmet verdikleri hastaları virüsle tanıştırma potansiyeline sahipler. Virüse ne kadar uzun süre ve yoğun miktarda maruz kalınırsa hastalanma riskinin ve dolayısıyla bulaştırıcılığın da o kadar artacağı öneriliyor (1).
+                    Bununla birlikte fiziksel ve zihinsel yorgunluk, uykusuzluk gibi faktörler de bağışıklık sistemini olumsuz etkileyerek virüse bağlı hastalanma ihtimalini yükseltiyor (2).
+                    24 saat nöbet tutan sağlıkçılar hem virüse daha uzun süre maruz kalıyorlar hem de zihinsel ve fiziksel olarak yorgun düşerek virüse karşı bedensel güçlerini kaybediyorlar. Virüs pandemisiyle mücadelede en önemli kaynak olan sağlık çalışanları 6 saatlik nöbetlerle ve dönüşümlü olarak çalışırlarsa uzun süreceği belli olan pandemi yönetimi daha verimli geçecektir. </h6>
+            </div>
+            <div class="col-md-5">
+                <h5><strong>Bu kampanyayı imzala</strong></h5>
+                <form style="padding-right: 100px">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Geçerli bir e-posta*</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                        <small id="emailHelp" class="form-text text-muted">E-postanızı asla başkasıyla paylaşmayacağız.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputad">Adınız*</label>
+                        <input type="text" class="form-control" id="exampleInputad"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputSoyad">Soyadınız*</label>
+                        <input type="text" class="form-control" id="exampleInputSoyad"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputUnvan">Çalışma ünvanınız*</label>
+                        <input type="text" class="form-control" id="exampleInputUnvan"/>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+                        <label class="form-check-label" for="exampleCheck1"><a href="#">Hizmet şartları</a>nı ve <a href="#">Gizlilik politikası</a>'nı kabul ediyorum.</label>
+                    </div>
+                    <Button type="submit" class="btn btn-primary" >İmzayı Kaydet</Button>
+                </form>
+            </div> 
+        </div>
+
+    </ui:define>
+
+</ui:composition>
 

@@ -5,6 +5,9 @@
         <group>
             <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/web/icerik.xhtml</file>
             <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/web/destek.xhtml</file>
+            <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/web/template/include/destek_afis.xhtml</file>
+            <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/web/template/template.xhtml</file>
+            <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/web/template/include/menu.xhtml</file>
         </group>
     </open-files>
 </project-private>
