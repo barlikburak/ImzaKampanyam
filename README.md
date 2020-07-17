@@ -1,7 +1,7 @@
 # ImzaKampanyam
 Onay maili ile kampanya imzalamak.<br/><br/>
-<img src=/assets/1.png width=450 height=459 />
-<img src=/assets/3.png width=450 height=459 /><br/>
+<img src=/assets/1.png width=400 height=405 />
+<img src=/assets/3.png width=400 height=405 /><br/>
 ## Onay Mesajı
 <img src=/assets/2.png width=545 height=225 /><br/>
 # Veritabanı
