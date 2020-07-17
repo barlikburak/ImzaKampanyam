@@ -19,34 +19,35 @@
             </div>
             <div class="col-md-5">
                 <h5><strong>Bu kampanyayı imzala</strong></h5>
-                <h:form style="padding-right: 100px">
-                    <tr>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Geçerli bir e-posta*</label>
-                            <h:inputText p:placeholder="email@example.com" class="form-control" id="inputEmail" value="#{ctrl.user.email}" validatorMessage="Geçersiz Eposta">
-                                <f:validateRegex pattern="^[A-Za-z0-9-+]+(\.[A-Za-z0-9+-])*@[A-Za-z0-9-]+(.[A-Za-z0-9]+)*(.[A-Za-z]{2,})$"/>
-                            </h:inputText>
-                            <h:message for="inputEmail" style="color: red;"/>
-                            <small id="emailHelp" class="form-text text-muted">E-postanızı asla başkasıyla paylaşmayacağız.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputAd">Adınız*</label>
-                            <h:inputText class="form-control" id="exampleInputAd" value="#{ctrl.user.ad}"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputSoyad">Soyadınız*</label>
-                            <h:inputText class="form-control" id="exampleInputSoyad" value="#{ctrl.user.soyad}"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputUnvan">Çalışma ünvanınız*</label>
-                            <h:inputText class="form-control" id="exampleInputUnvan" value="#{ctrl.user.calismaUnvani}"/>
-                        </div>
-                        <div class="form-group form-check">
-                            <h:selectBooleanCheckbox class="form-check-input" id="exampleCheck1" value="#{ctrl.user.sartOnay}"/>
-                            <label class="form-check-label" for="exampleCheck1"><a href="#">Hizmet şartları</a>nı ve <a href="#">Gizlilik politikası</a>'nı kabul ediyorum.</label>
-                        </div>
-                        <h:commandButton type="submit" class="btn btn-primary" value="İmzayı Kaydet" action="#{ctrl.imzaKayit()}" />
-                    </tr>
+                <h:form id="imzaKayitForm" style="padding-right: 100px">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Geçerli bir e-posta*</label>
+                        <h:inputText p:placeholder="email@example.com" class="form-control" id="inputEmail" value="#{ctrl.user.email}" validatorMessage="Geçersiz Eposta">
+                            <f:validateRegex pattern="^[A-Za-z0-9-+]+(\.[A-Za-z0-9+-])*@[A-Za-z0-9-]+(.[A-Za-z0-9]+)*(.[A-Za-z]{2,})$"/>
+                        </h:inputText>
+                        <h:message for="inputEmail" style="color: red;"/>
+                        <small id="emailHelp" class="form-text text-muted">E-postanızı asla başkasıyla paylaşmayacağız.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputAd">Adınız*</label>
+                        <h:inputText class="form-control" id="exampleInputAd" value="#{ctrl.user.ad}" validator="#{validationBean.validate}"/>
+                        <h:message for="exampleInputAd" style="color: red;"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputSoyad">Soyadınız*</label>
+                        <h:inputText class="form-control" id="exampleInputSoyad" value="#{ctrl.user.soyad}" validator="#{validationBean.validate}"/>
+                        <h:message for="exampleInputSoyad" style="color: red;"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputUnvan">Çalışma ünvanınız*</label>
+                        <h:inputText class="form-control" id="exampleInputUnvan" value="#{ctrl.user.calismaUnvani}"/>
+                    </div>
+                    <div class="form-group form-check">
+                        <h:selectBooleanCheckbox class="form-check-input" id="exampleCheck1" value="#{ctrl.sartOnay}" validator="#{validationBean.validateSartOnay}"/>
+                        <label class="form-check-label" for="exampleCheck1"><a href="#">Hizmet şartları</a>nı ve <a href="#">Gizlilik politikası</a>'nı kabul ediyorum.</label>
+                        <h:message for="exampleCheck1" style="color: red;" />
+                    </div>
+                    <h:commandButton type="submit" class="btn btn-primary" value="İmzayı Kaydet" action="#{ctrl.imzaKayit()}" />
                 </h:form>
             </div> 
         </div>

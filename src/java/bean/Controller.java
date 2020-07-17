@@ -1,10 +1,11 @@
 package bean;
 
-import email.EmailSend;
+import dao.UserDAO;
 import entity.User;
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -15,10 +16,15 @@ import javax.faces.bean.ManagedBean;
 public class Controller implements Serializable {
 
     private User user;
+    private UserDAO userDAO;
+    private boolean sartOnay;
 
     public void imzaKayit() {
-        user.setMailOnayUrl("http://localhost:8080/imzakampanyam/" + getAlphaNumericString(50));
-        System.out.println(EmailSend.sendMail(user));
+        if (sartOnay) {
+            user.setMailOnayUrl(getAlphaNumericString(50));
+            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("valid_user", user);
+            getUserDAO().insert(user);
+        }
     }
 
     private String getAlphaNumericString(int n) {
@@ -48,8 +54,23 @@ public class Controller implements Serializable {
         return user;
     }
 
+    public UserDAO getUserDAO() {
+        if (this.userDAO == null) {
+            this.userDAO = new UserDAO();
+        }
+        return userDAO;
+    }
+
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public boolean isSartOnay() {
+        return sartOnay;
+    }
+
+    public void setSartOnay(boolean sartOnay) {
+        this.sartOnay = sartOnay;
     }
 
 }

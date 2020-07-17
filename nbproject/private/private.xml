@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/src/java/util/URLFilter.java</file>
+            <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/src/java/util/ValidationBean.java</file>
             <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/web/icerik.xhtml</file>
-            <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/src/java/email/EmailSend.java</file>
             <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/web/destek.xhtml</file>
-            <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/src/java/entity/User.java</file>
             <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/src/java/bean/Controller.java</file>
+            <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/src/java/entity/User.java</file>
+            <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/src/java/dao/AbstractDAO.java</file>
+            <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/src/java/dao/UserDAO.java</file>
+            <file>file:/home/burak/NetBeansProjects/ImzaKampanyam/src/java/util/Connector.java</file>
         </group>
     </open-files>
 </project-private>

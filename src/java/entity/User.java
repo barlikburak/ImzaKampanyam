@@ -10,7 +10,6 @@ public class User {
     private String ad;
     private String soyad;
     private String calismaUnvani;
-    private boolean sartOnay;
     private String mailOnayUrl;
 
     public User() {
@@ -46,14 +45,6 @@ public class User {
 
     public void setCalismaUnvani(String calismaUnvani) {
         this.calismaUnvani = calismaUnvani;
-    }
-
-    public boolean isSartOnay() {
-        return sartOnay;
-    }
-
-    public void setSartOnay(boolean sartOnay) {
-        this.sartOnay = sartOnay;
     }
 
     public String getMailOnayUrl() {
